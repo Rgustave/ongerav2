@@ -1,0 +1,71 @@
+.login input[type="text"],
+.login input[type="password"] {
+  max-width:500px;
+  width: 80%;
+  line-height:3em;
+  font-family: 'Ubuntu', sans-serif;
+  margin:1em 2em;
+  border-radius:5px;
+  border:2px solid #f2f2f2;
+  outline:none;
+  padding-left:10px;
+}
+
+.login-logo{ margin-left:180px;}
+
+em {float:right; color:#E05C65; padding-left:20px;padding-right: 10px;}
+
+.login {
+  margin:0 auto;
+  margin-top: 200px;
+  max-width:600px;
+}
+
+.login-form {
+  background:#222b3a;
+  box-shadow:0px 0px 10px #000;
+}
+.login-form {
+    padding-top: 15px;
+    padding-bottom: 10%;
+    margin: 5% auto;
+    text-align: center;
+    height: 340px;
+}
+
+
+.login-form h4 {
+  text-align:left;
+  margin: auto;
+  margin-left:40px;
+  color:#fff;
+}
+
+.login-form button[type="submit"] {
+  height:30px;
+  width:100px;
+  background:#fff;
+  border:1px solid #f2f2f2;
+  border-radius:20px;
+  color: slategrey;
+  text-transform:uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  cursor:pointer;
+  outline: none;
+  /*margin-left:225px;*/
+
+}
+
+.loginLabels{
+  text-align:left;
+  margin: auto;
+  color:#fff;
+  font-size: 18px
+
+}
+.login-title{
+    display: flex;
+}
+.login-error{
+    margin-top: 10px;
+}

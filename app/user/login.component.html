@@ -1,0 +1,37 @@
+
+
+<div class="login">
+   <div class = "">
+     <img class = "login-logo" src="app/assets/images/logoongera.png" alt="Ongera Logo">
+   </div>
+
+
+
+<div class="login-form">
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" autocomplete="off" novalidate>
+    <div class="form-group" >
+      <!--<label for="userName">User Name:</label>-->
+      <div class="login-title">
+       <h4>Username:</h4>
+        <em *ngIf="loginForm.controls.userName?.invalid && (loginForm.controls.userName?.touched || mouseoverLogin)">Required</em>
+      </div>
+      <input (ngModel) ="userName" name ="userName" required id="userName" type="text"  placeholder="User Name..."/>
+    </div>
+    <div class="form-group" >
+      <!--<label  for="password">Password:</label>-->
+      <div class="login-title">
+          <h4>Password:</h4>
+          <em *ngIf="loginForm.controls.password?.invalid && (loginForm.controls.password?.touched || mouseoverLogin)">Required</em>
+      </div>
+      <input (ngModel) ="password" name ="password" required id="password"  type="password"placeholder="Password..."/>
+    </div> 
+    <span (mouseenter)="mouseoverLogin=true" (mouseleave)="mouseoverLogin=false">       
+    <button type="submit" [disabled]="loginForm.invalid" class="login-button">Login</button>
+    <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+    </span>
+    <div *ngIf="error" class="alert alert-danger login-error">{{error}}</div>
+
+  </form>
+</div>
+
+</div>
